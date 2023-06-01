@@ -59,14 +59,14 @@ const Addexpenses = () => {
       <div className="incomParent">
         <div className="INCOME">
           <h3>INCOME</h3>
-          <p>{calculateIncome()}</p>
+          <h4 style={{'color':"green"}}>{calculateIncome()}</h4>
         </div>
       </div>
 
       <div className="expenseParent my-3">
         <div className="EXPENSES">
           <h3>EXPENSE</h3>
-          <p>{calculateExpense()}</p>
+          <h4 style={{'color':"red"}}>{calculateExpense()}</h4>
         </div>
       </div>
 
