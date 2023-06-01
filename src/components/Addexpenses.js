@@ -19,13 +19,14 @@ const Addexpenses = () => {
       type: amount < 0 ? 'expense' : 'income',
     };
   
-    setTransactions(prevTransactions => [...prevTransactions, newTransaction]); // Use a functional update to access the previous transactions
-    // const toSave = [...transactions]
-    dispatch(authActions.addTransaction(transactions));
-
+    setTransactions(prevTransactions => [...prevTransactions, newTransaction]);
+  
+    dispatch(authActions.addTransaction([...transactions, newTransaction]));
+  
     setText("");
     setAmount(0);
   };
+  
   
   const calculateBalance = () => {
     return transactions.reduce((total, transaction) => total + transaction.amount, 0);
