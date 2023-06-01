@@ -8,7 +8,7 @@ const storee = createSlice({
   },
   reducers: {
     addTransaction: (state, action) => {
-        state.valuee.push(action.payload);
+        state.valuee.push(...action.payload);
       },
    
   },

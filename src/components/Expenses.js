@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const Expenses = () => {
-  const authenticationValue = useSelector((state) => state.authentication.valuee);
-
-  // Assuming authenticationValue is an array of objects, each object having a property called 'value'
-  const values = authenticationValue.map((item) => item.value);
+  const Income = useSelector((state) => state.authentication.valuee);
 
   return (
     <div>
       Expenses:
-      {values.map((value, index) => (
-        <div key={index}>{value}</div>
+      {Income.map((incomeItem) => (
+        <div key={incomeItem.id}>
+          <p>{incomeItem.text}</p>
+          <p>Amount: {incomeItem.amount}</p>
+          <p>Date: {incomeItem.date}</p>
+          <p>Type: {incomeItem.type}</p>
+        </div>
       ))}
     </div>
   );
