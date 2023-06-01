@@ -20,7 +20,8 @@ const Addexpenses = () => {
     };
   
     setTransactions([...transactions, newTransaction]);
-    dispatch(authActions.addTransaction(transactions));
+    dispatch(authActions.addTransaction([...transactions, newTransaction]));
+
 
     setText("");
     setAmount(0);
