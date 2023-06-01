@@ -19,7 +19,8 @@ const Addexpenses = () => {
       type: amount < 0 ? 'expense' : 'income',
     };
   
-    setTransactions([...transactions, newTransaction]);
+    setTransactions(prevTransactions => [...prevTransactions, newTransaction]); // Use a functional update to access the previous transactions
+    // const toSave = [...transactions]
     dispatch(authActions.addTransaction(transactions));
 
     setText("");

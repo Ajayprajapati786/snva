@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 const Expenses = () => {
   const income = useSelector((state) => state.authentication.valuee);
 
+
+  console.log(income);
   return (
     <div>
       Expenses:
