@@ -51,7 +51,7 @@ const Addexpenses = () => {
 
   return (
     <div className="container">
-      <h1>Wallet</h1>
+      <h1 className="text-center">Wallet</h1>
       <h4 className="text-center">YOUR BALANCE</h4>
       <h3 className="text-center">{calculateBalance()}</h3>
 
